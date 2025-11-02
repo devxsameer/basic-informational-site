@@ -1,8 +1,8 @@
 {
   "name": "basic-informational-site",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple Node.js-based informational website built as part of **The Odin Project** curriculum. This project serves as an introduction to creating a basic web server using Node's built-in `http` and `fs` modules — without any external frameworks.",
+  "main": "server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
