@@ -24,6 +24,12 @@ const server = createServer((req, res) => {
       res.statusCode = 200;
       break;
     }
+    case "/contact": {
+      res.statusCode = 301;
+      res.setHeader("Location", "/contact-me");
+      res.end();
+      break;
+    }
     default: {
       path += "404.html";
       res.statusCode = 404;
