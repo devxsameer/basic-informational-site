@@ -1,7 +1,7 @@
 # 🌐 Basic Informational Site
 
-A simple Node.js-based informational website built as part of **The Odin Project** curriculum.  
-This project serves as an introduction to creating a basic web server using Node’s built-in `http` and `fs` modules — without any external frameworks.
+A simple Express.js-based informational website built as part of The Odin Project curriculum.
+Originally made using Node’s core http and fs modules, this upgraded version introduces Express, dotenv, and a cleaner modular structure for better scalability and maintainability.
 
 ---
 
@@ -9,17 +9,19 @@ This project serves as an introduction to creating a basic web server using Node
 
 The project displays multiple static HTML pages and demonstrates:
 
-- Basic routing using Node’s `http` module
-- Serving static HTML files with `fs.readFile()`
-- Setting HTTP status codes and headers
-- Handling redirects (e.g., `/contact` → `/contact-me`)
-- Returning a custom `404.html` page for unknown routes
+- Setting up an Express server with ESM (import syntax)
+- Using environment variables with dotenv
+- Serving static files via express.static()
+- Handling routing and redirects with Express
+- Sending custom 404 pages for unknown routes
 
 ---
 
 ## 🏗️ Tech Stack
 
-- **Node.js** (core modules: `http`, `fs`)
+- **Node.js** (v24+)
+- **Express.js** (v5 -- simplified routing middleware)
+- **dotenv** (environment variable management)
 - **HTML5** (static pages only — no CSS or JS yet)
 
 ---
@@ -28,8 +30,9 @@ The project displays multiple static HTML pages and demonstrates:
 
 ```
 basic-informational-site/
+├── .env
 ├── package.json
-├── server.mjs
+├── server.js
 └── views/
     ├── index.html
     ├── about.html
@@ -58,23 +61,44 @@ basic-informational-site/
    git clone https://github.com/devxsameer/basic-informational-site.git
    cd basic-informational-site
    ```
-2. Run the server:
+2. Install dependencies:
+
    ```bash
-   node server.mjs
+   pnpm install
    ```
-3. Open your browser and visit:
+
+   (Or use npm install if you prefer — your package manager is set to pnpm.)
+
+3. Create a `.env` file (optional):
    ```bash
-   http://localhost:3000
+   PORT=4000
+   ```
+4. Run the server:
+
+   ```bash
+   node server.js
+   ```
+
+   or with auto-restart:
+
+   ```bash
+   pnpm start
+   ```
+
+5. Open your browser and visit:
+   ```bash
+   http://localhost:4000
    ```
 
 ---
 
 ## 💡 What I Learned
 
-- Setting up a basic HTTP server without Express
-- Reading and serving HTML files using Node’s file system module
-- Understanding status codes, redirects, and basic routing logic
-- Organizing project structure cleanly for small server-based sites
+- Migrating a pure Node.js server to Express
+- Using ES Modules (import/export) instead of require()
+- Setting up and using environment variables via dotenv
+- Simplifying routing and static file handling with Express middleware
+- Maintaining clean folder structures for scalability
 
 ---
 

@@ -1,13 +1,19 @@
 {
   "name": "basic-informational-site",
   "version": "1.0.0",
+  "type": "module",
   "description": "A simple Node.js-based informational website built as part of **The Odin Project** curriculum. This project serves as an introduction to creating a basic web server using Node's built-in `http` and `fs` modules — without any external frameworks.",
   "main": "server.mjs",
   "scripts": {
+    "start": "node --watch server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.20.0"
+  "packageManager": "pnpm@10.20.0",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
 }
